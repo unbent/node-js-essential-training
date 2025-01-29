@@ -1,10 +1,18 @@
-function grab(flag) {
-  let indexAfterFlag = process.argv.indexOf(flag) + 1;
-  return process.argv[indexAfterFlag];
+process.stdout.write("Hello  \n \n")
+
+const questionsAndAnswers = {
+  'Do you wear wigs?': '',
+  'Have you worn wigs?': '',
+  'When will you wear wigs?': '',
 }
 
-let greeting = grab("--greeting");
-let user = grab("--user");
+const ask = ([question, answer]) => {
+  process.stdout.write(`\n\n\n ${question} \n >`);
+}
 
-console.log(greeting);
-console.log(user);
+process.stdin.on("data", function (data) {
+  process.stdout.write(data.toString().trim());
+});
+
+Object.entries(questionsAndAnswers).forEach(ask);
+
