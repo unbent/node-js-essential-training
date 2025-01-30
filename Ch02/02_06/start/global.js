@@ -1,31 +1,7 @@
-process.stdout.write("Hello  \n \n");
+const waitTime = 3000;
 
-const questions = [
-  "What is your name?",
-  "What would you rather be doing?",
-  "What is your preferred programming language"
-];
-const answers = [];
+console.log(`Setting a ${waitTime / 1000} second delay.`);
 
-function ask(i = 0) {
-  process.stdout.write(`\n\n\n ${questions[i]}`);
-  process.stdout.write(` > `);
-}
+const timerFinished = () => console.log('done');
 
-ask();
-
-process.stdin.on("data", function (data) {
-  answers.push(data.toString().trim());
-  if (answers.length < questions.length) {
-    ask(answers.length);
-  } else {
-    process.exit();
-  }
-});
-
-process.on("exit", function () {
-  process.stdout.write("\n\n\n\n");
-  process.stdout.write(
-    `Go ${answers[1]} ${answers[0]} you can finish writing ${answers[2]} later`
-  );
-});
+setTimeout(timerFinished, waitTime);
