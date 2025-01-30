@@ -8,4 +8,4 @@ Useful Links:
 
 Notes:
 - We want to think about the global object as containing all of the objects, values, and methods that we can use in a Node.js file without having to import anything.
-- Node.js, at least in the way it is being taught so far, is very useful for creating console applications. I really enjoyed making the timers and seeing the percentage marker incrementing. Let's try making a small console application for practice after I'm done with this course.
+- Node.js, at least in the way it is being taught so far, is very useful for creating console applications. I really enjoyed making the timers and seeing the percentage marker incrementing. Let's try making a small console application for practice after I'm done with this course. Maybe a simple alarm clock application? Let's create a new repo with goals and features.
