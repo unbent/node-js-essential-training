@@ -1,10 +1,7 @@
 const fs = require("fs");
 
-fs.readdir("./", function (err, files) {
-  if (err) {
-    throw err;
-  }
-  console.log(files);
-});
+console.log('reading file...');
 
-console.log("reading files...");
+fs.readFile("./readme.md", "UTF-8", (err, ipsum) => {
+  console.log(ipsum)
+});
